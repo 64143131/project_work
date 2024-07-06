@@ -35,31 +35,108 @@ class _SecondScreenState extends State<SecondScreen> {
           ),
         ),
       ),
-      body: Container(
-        child: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
             children: [
-              Container(
-                color: Colors.red,
-                height: 120,
-                width: 120,
+              SizedBox(
+                height: 80,
               ),
-              SizedBox(width: 25),
-              Container(
-                color: Colors.green,
-                height: 120,
-                width: 180,
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  side: BorderSide(
+                    color: Colors.black,
+                    width: 3,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 25, right: 25),
+                  child: Text('Starwbery Paviova',
+                      style:
+                          TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
+                ),
               ),
-              SizedBox(width: 25),
-              Container(
-                color: Colors.blue,
-                height: 180,
-                width: 120,
+              SizedBox(height: 20),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  side: BorderSide(
+                    color: Colors.black,
+                    width: 2,
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 25, right: 25),
+                  child: Text(
+                      'Paviova is a men is a mertigury more\nPaviova is a men is a mertigury more\nPaviova is a men is a mertigury more\nPaviova is a men is a mertigury more',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                ),
+              ),
+              SizedBox(height: 20),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  side: BorderSide(
+                    color: Colors.black,
+                    width: 2,
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    Icon(Icons.star),
+                    Icon(Icons.star),
+                    Icon(Icons.star),
+                    Icon(Icons.star),
+                    Icon(Icons.star),
+                    SizedBox(
+                      width: 45,
+                    ),
+                    Text('170 Reviwes')
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 35,
+              ),
+              Row(
+                children: [
+                  Column(
+                    children: [
+                      Icon(Icons.percent),
+                    ],
+                  ),
+                  SizedBox(width: 35),
+                  Column(
+                    children: [
+                      Icon(Icons.person),
+                    ],
+                  ),
+                  SizedBox(width: 35),
+                  Column(
+                    children: [
+                      Icon(Icons.share),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),
-        ),
+          SizedBox(
+            width: 36,
+          ),
+          Column(
+            children: [
+              Image.asset(
+                'images/bus.jpg',
+                height: 500,
+                width: 500,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

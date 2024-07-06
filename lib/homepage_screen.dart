@@ -21,8 +21,19 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: Drawer(
           child: Column(
         children: [
-          Text('data'),
-          Text('data'),
+          Icon(Icons.person, size: screenWidth * 0.2),
+          ListTile(
+            title: Text('หน้าเเรก'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            title: Text('หน้าสอง'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
         ],
       )),
       extendBodyBehindAppBar: true,
