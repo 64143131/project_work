@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:project_work/InputData/name_input.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class SecondScreen extends StatefulWidget {
+  const SecondScreen({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<SecondScreen> createState() => _SecondScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  TextEditingController nameController = TextEditingController();
-
+class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -23,10 +20,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: AppBar(
           backgroundColor: Color(0xFF82B1FF),
           centerTitle: true,
-          title: Text(
-            'หน้าเเรก',
-            style: TextStyle(
-                fontSize: screenWidth * 0.035, fontWeight: FontWeight.bold),
+          title: Padding(
+            padding: EdgeInsets.only(top: screenHeight * 0.01),
+            child: Text(
+              'หน้าสอง',
+              style: TextStyle(
+                  fontSize: screenWidth * 0.035, fontWeight: FontWeight.bold),
+            ),
           ),
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
@@ -35,14 +35,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
-      ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: screenHeight * 0.12,
-          ),
-          NameInput(nameController: nameController),
-        ],
       ),
     );
   }

@@ -32,7 +32,7 @@ class _NameInputState extends State<NameInput> {
           Padding(
             padding: EdgeInsets.only(
               top: screenHeight * 0.015,
-              bottom: screenHeight * 0.3,
+              bottom: screenHeight * 0.03,
             ),
             child: TextField(
               cursorColor: Color(0xFF82B1FF),
