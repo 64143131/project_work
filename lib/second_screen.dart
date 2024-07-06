@@ -14,7 +14,6 @@ class _SecondScreenState extends State<SecondScreen> {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      extendBodyBehindAppBar: true,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(screenHeight * 0.07),
         child: AppBar(
@@ -33,6 +32,32 @@ class _SecondScreenState extends State<SecondScreen> {
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20),
             ),
+          ),
+        ),
+      ),
+      body: Container(
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                color: Colors.red,
+                height: 120,
+                width: 120,
+              ),
+              SizedBox(width: 25),
+              Container(
+                color: Colors.green,
+                height: 120,
+                width: 180,
+              ),
+              SizedBox(width: 25),
+              Container(
+                color: Colors.blue,
+                height: 180,
+                width: 120,
+              ),
+            ],
           ),
         ),
       ),
