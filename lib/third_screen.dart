@@ -2,6 +2,7 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:project_work/bottom_menu.dart/aboutus.dart';
 import 'package:project_work/bottom_menu.dart/news.dart';
+import 'package:project_work/calculate_screen.dart';
 
 class ThirdScreen extends StatefulWidget {
   const ThirdScreen({Key? key}) : super(key: key);
@@ -73,9 +74,20 @@ class _ThirdScreenState extends State<ThirdScreen> {
       bottomNavigationBar: BottomNavigationBar(
           showUnselectedLabels: true,
           backgroundColor: Color(0xFF82B1FF),
+          onTap: (value) {
+            switch (value) {
+              case 1:
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => CalculateScreen()));
+                break;
+              default:
+                break;
+            }
+          },
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Person'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.calculate), label: 'Calculator'),
             BottomNavigationBarItem(icon: Icon(Icons.call), label: 'Call'),
           ]),
     );

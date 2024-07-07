@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_work/Add_Todolist.dart';
 import 'package:project_work/homepage_screen.dart';
 import 'package:project_work/third_screen.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ThirdScreen(),
+      home: AddTodoList(),
     );
   }
 }
